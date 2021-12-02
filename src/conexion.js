@@ -8,7 +8,7 @@ const dbName = 'dbtarea5';
 (async () => {
 	try {
 		await client.connect();
-		console.log('Connected successfully to server');
+		console.log('Servidor conectado');
 		const db = client.db(dbName);
 		const collection = db.collection('conct');
 
@@ -20,13 +20,13 @@ const dbName = 'dbtarea5';
 async function insertData(body) {
 	try {
 		await client.connect();
-		console.log('Connected successfully to server');
+		console.log('Servidor conectado');
 		const db = client.db(dbName);
 		const collection = db.collection('conct');
 		await collection.insertMany(body);
 	} catch (error) {
 		if (error) {
-			console.log(error); // special case for some reason
+			console.log(error); 
 		}
 	}
 }
